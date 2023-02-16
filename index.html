@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather</title>
+        <link rel="icon" href="assets/img/climate-icon.svg">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+            integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body>
+        <main class="main-container flex-item">
+            <div class="background"></div>
+            <div class="main-card flex-item">
+                <div class="search-box">
+                    <form class="form-container flex-item">
+                        <label for="city-inp">Check out the weather of some city</label>
+                        <div class="input-box flex-item">
+                            <input type="text" name="city" id="city-inp" placeholder="Type the choosen city" autocomplete="off">
+                            <button type="submit" class="flex-item" id="city-submit-btn">
+                                <img src="assets/img/search-icon.svg" alt="A white magnifier icon.">
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="suggestions-box">
+                    <ul id="suggestions-list">
+                        <li>Vienna</li>
+                        <li>Dubai</li>
+                        <li>London</li>
+                        <li>Paris</li>
+                        <li>São Paulo</li>
+                        <li>Vancouver</li>
+                        <li>Tokyo</li>
+                        <li>Las Vegas</li>
+                    </ul>
+                </div>
+                <div class="weather-box flex-item hide">
+                    <div id="weather-box-heading" class="flex-item">
+                        <img src="assets/img/location-icon.svg" alt="A white location icon.">
+                        <p id="city"></p>
+                        <img src="#" alt="Auto-generated flag image." id="country-flag">
+                    </div>
+                    <p id="temperature"></p>
+                    <p id="description"></p>
+                    <div class="more-info flex-item">
+                        <div id="humidity-box" class="flex-item">
+                            <img src="assets/img/humidity-icon.svg" alt="A white water drop icon.">
+                            <p id="humidity"></p>
+                        </div>
+                        <div id="wind-speed-box" class="flex-item">
+                            <p id="wind-speed"></p>
+                            <img src="assets/img/wind-icon.svg" alt="A white wind icon.">
+                        </div>
+                    </div>
+                </div>
+                <p id="error-message" class="hide">There is no city with this name.</p>
+                <div id="loader" class="hide">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+            </div>
+        </main>
+        <footer class="footer-container">
+            <p>
+                Developed by 
+                <a href="https://github.com/ismaelcardosojr" target="_blank">
+                    ismaelcardosojr
+                </a>
+            </p>
+        </footer>
+        <script src="assets/js/scripts.js"></script>
+    </body>
+</html>
